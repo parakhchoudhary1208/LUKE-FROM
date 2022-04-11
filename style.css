@@ -1,0 +1,344 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+body::-webkit-scrollbar{
+    display: none;
+}
+
+#main{
+    overflow: hidden;
+    width: 100%;
+    background-color: #f8f8f8ff;
+    min-height: 100vh;
+}
+
+#cursor{
+    position: fixed;
+    margin-left: -50px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 999;
+}
+
+#cursor #wheel{
+    position: relative;
+    margin-top: -10.5px;
+    margin-left: -9px;
+    width: 140px;
+    mix-blend-mode: difference;
+    animation: wheel 5s linear infinite both;
+    z-index: 999;
+}
+
+@keyframes wheel {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+#cursor #circle-1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+#cursor #circle-1 #arrow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #F8F8F8; 
+}
+
+#cursor #circle-1 #arrow svg{
+    width: 30px;
+    height: 30px;
+}
+
+#smcircle{
+    pointer-events: none;
+    position: fixed;
+    transition-delay: 15ms;
+    width: 20px;
+    height: 20px;
+    border: 2px solid black;
+    border-radius: 50%;
+    z-index: 9999;
+}
+
+#main #nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px;
+    width: 100%;
+    min-height: 10px;
+    background-color: transparent;
+}
+
+#main #nav #logo{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 50%;
+   height: 120px;
+   width: 120px;
+   margin-left:  -20px;
+   object-fit: cover;
+   object-position: center;
+}
+
+#main #nav #logo1{
+    height: 45px;
+    width: 45px;
+}
+
+#main #nav #menu{
+    position: fixed;
+    right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    width: 120px;
+    margin-right: -30px;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: transform 1s ease-in-out;
+}
+
+#main #nav #menu i{
+    font-size: 25px;
+    
+}
+
+#main #nav #menu:hover{
+    transform: rotate(360deg);
+}
+
+#main #main-heading{
+    width: 60%;
+}
+
+#main #main-heading #text1{
+    width: 43%;
+    overflow: hidden;
+    font-family: 'Vanguard CF Demi Bold';
+    font-size: 100px;
+    font-weight: 500;
+    line-height: 210px;
+    margin: 0px 75px;
+    padding: 0px 0px;
+}
+
+#main #main-heading #text2{
+    overflow: hidden;
+    font-family: 'Vanguard CF Demi Bold';
+    font-size: 100px;
+    font-weight: 500;
+    line-height: 210px;
+    margin: -30px 75px;
+    padding: -20px 0px;
+}
+
+#main #main-heading #star{
+    overflow: hidden;
+    font-family: 'Vanguard CF Demi Bold';
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 210px;
+    position: absolute;
+    top: 35%;
+    left: 53.5%;
+}
+
+#main #sidebar{
+    position: fixed;
+    right: -4%;
+    top: 46%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 14px;
+    height: 55px;
+    width: 165px;
+    background-color: black;
+    transform: rotate(-90deg);
+}
+
+#main #sidebar #text3{
+    font-family: 'Gilroy';
+    font-size: 16px;
+    color: white;
+    font-weight: 600;
+}
+
+#main #sidebar #text4{
+    font-family: 'Gilroy';
+    font-size: 20px;
+    color: white;
+    writing-mode: vertical-lr;
+}
+
+#main #para{
+    padding: 12px 20px;
+    height: 50px;
+    width: 250px;
+    margin-left: 77.5%;
+    margin-top: -3%;
+    font-family: 'Roboto Mono';
+    font-size: 10px;
+    line-height: 16px;
+    word-spacing: 2px;
+}
+
+#sections{
+    display: flex;
+    justify-content: flex-end;
+    padding: 60px 60px;
+    margin-top: 110px;
+}
+
+#sections #section{
+    height: 560px;
+    width: 725px;
+}
+
+#sections:nth-child(2n){
+    justify-content: flex-start;
+}
+
+#section img{
+    width: 100%;
+    height: 90%;
+}
+
+#sections #section #insider{
+    width: 100%;
+}
+
+#sections #section #insider h2{
+    margin: 10px 0px;
+    font-family: 'Söhne';
+    font-size: 28px;
+}
+
+#sections #section #insider h4{
+    margin-top: 5px;
+    font-family: 'Copyright Klim Type Foundry';
+    font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    color: black;
+}
+
+#footer{
+    height: 700px;
+}
+
+#footer h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 15%;
+    font-size: 40px;
+    margin-top: 110px;
+    margin-left: 45px;
+    font-family: 'Vanguard CF Demi Bold';
+    font-size: 75px;
+}
+
+#footer #mail{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 250px; 
+    margin-top: 10px;
+    margin-left: 45px;
+    margin-bottom: 200px;
+    border-radius: 50%;
+}
+
+#footer #mail #mailme{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
+    color: #fff;
+    font-family: 'Roboto Mono';
+    font-size: 13px;
+}
+
+#footer #mail #mailme h4{
+    margin-left: -20px;
+    word-spacing: 1px;
+}
+
+#footer  #mail #mailme i{
+    position: absolute;
+    margin-left: 75px;
+    font-size: 20px;
+}
+
+#footer #navb{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 65px;
+    margin-top: 250px;
+    font-family: 'Söhne';
+}
+
+#footer #navb h3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    width: 250px;
+    font-size: 20px;
+}
+
+#footer #navb h4{
+    font-size: 10px;
+    font-weight: 100;
+    color: rgb(92, 92, 92);
+    word-spacing: 2px;
+}
+
+
+
