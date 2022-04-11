@@ -100,6 +100,7 @@ function abc(){
         document.querySelector("#main").style.backgroundColor= abc.target.dataset.color
         document.querySelector("#cursor").style.mixBlendMode= "difference"
         document.querySelector("#smcircle").style.display= "none"
+        document.querySelector("#smcircle").style.border= "none"
         document.querySelector("#cursor").style.top= `${abc.clientY}px`
         document.querySelector("#cursor").style.left= `${abc.clientX}px`
     });
