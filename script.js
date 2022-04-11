@@ -3,6 +3,7 @@ document.querySelector("#main")
     function abc(){
         document.querySelector("#smcircle").style.top= `${dets.clientY}px`
         document.querySelector("#smcircle").style.left= `${dets.clientX}px`
+        document.querySelector("#smcircle").style.display= "initial"
     }
     window.requestAnimationFrame(abc)
 });
