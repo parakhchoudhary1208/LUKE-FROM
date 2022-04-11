@@ -80,6 +80,7 @@ body::-webkit-scrollbar{
 }
 
 #smcircle{
+    display: none;
     pointer-events: none;
     position: fixed;
     transition-delay: 15ms;
