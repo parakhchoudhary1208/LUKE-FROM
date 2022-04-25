@@ -233,9 +233,20 @@ body::-webkit-scrollbar{
     justify-content: flex-start;
 }
 
-#section img{
+#section #image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    object-position: top;
     width: 100%;
     height: 90%;
+    overflow: hidden;
+}
+
+#section img:hover{
+    transition: ease 2s;
+    transform: scale(1.2);
 }
 
 #sections #section #insider{
