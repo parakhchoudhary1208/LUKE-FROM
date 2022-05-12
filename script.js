@@ -103,19 +103,33 @@ function abc(){
         document.querySelector("#smcircle").style.border= "none"
         document.querySelector("#cursor").style.top= `${abc.clientY}px`
         document.querySelector("#cursor").style.left= `${abc.clientX}px`
+        document.querySelectorAll("#img").forEach(function(eleme){
+            gsap.to(eleme,{
+                scale: 1.08,
+                duration: 1,
+                ease: Power3.easeIn,
+            })
+        })
     });
 });
 
 
 document.querySelectorAll(".abc")
 .forEach(function(elem){
-    elem.addEventListener("mouseout", function(dets){
+    elem.addEventListener("mouseleave", function(dets){
         document.querySelector("#smcircle").style.display = "initial"
         document.querySelector("#main").style.backgroundColor= "#f8f8f8"
         document.querySelector("#smcircle").style.border="2px solid black"
         document.querySelector("#cursor").style.backgroundColor= "transparent"
         document.querySelector("#cursor").style.mixBlendMode= "initial"
         document.querySelector("#cursor").style.display= "none"
+        document.querySelectorAll("#img").forEach(function(eleme){
+            gsap.to(eleme,{
+                scale: 1,
+                duration: 1,
+                ease: Power3.easeOut,
+            })
+        })
     })
 });
 }
@@ -144,4 +158,3 @@ document.querySelectorAll(".abc")
         document.querySelector("#cursor").style.display= "none"
     })
 });*/
-
