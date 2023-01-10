@@ -17,6 +17,11 @@
     src: url(./RobotoMono-Italic-VariableFont_wght.ttf);
 }
 
+@font-face {
+    font-family: gilroy;
+    src: url(./CopyrightKlimTypeFoundry.ttf);
+}
+
 *{
     margin: 0;
     padding: 0;
