@@ -1,3 +1,12 @@
+@font-face {
+    font-family: van;
+    src: url(./5f729a273e12c8c5fddc5a82_VanguardCF-DemiBold\ \(1\).ttf);
+}
+@font-face {
+    font-family: gilroy;
+    src: url(./Gilroy-Regular.ttf);
+}
+
 *{
     margin: 0;
     padding: 0;
